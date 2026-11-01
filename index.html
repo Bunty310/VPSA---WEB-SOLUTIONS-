@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VPSA WEB SOLUTIONS - Landing Page</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            red: '#e23838',
+                            green: '#00a86b',
+                            dark: '#112233',
+                            gray: '#555555'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom styles for specific elements not easily handled by pure utility classes */
+        .watermark-bg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 150%;
+            height: auto;
+            opacity: 0.2; /* Increased opacity to make it more visible. Change to 1 for full visibility */
+            /* filter: blur(15px);  <-- REMOVED THIS LINE TO MAKE IT CLEAR */
+            pointer-events: none;
+            z-index: 0;
+        }
+        .hero-left-content {
+            position: relative;
+            z-index: 10;
+        }
+        
+        /* Floating animations for the right icons */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .floating-icon {
+            animation: float 4s ease-in-out infinite;
+        }
+        .floating-icon-delayed {
+            animation: float 4s ease-in-out infinite;
+            animation-delay: 2s;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 antialiased overflow-x-hidden">
+
+    <!-- Header Section -->
+    <header class="bg-white sticky top-0 z-50 shadow-sm">
+        <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center cursor-pointer">
+                    <!-- Updated Logo Image -->
+                    <img src="17f55b4e-a8c9-495d-b1d9-3dafbc40d9dc.png" alt="Company Logo" class="h-12 w-auto">
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8 items-center text-sm font-medium text-gray-700">
+                    <a href="#" class="hover:text-brand-green transition-colors">About VPSA</a>
+                    <div class="relative group cursor-pointer">
+                        <span class="flex items-center hover:text-brand-green transition-colors">
+                            Web Solutions <i class="fas fa-chevron-down ml-1 text-xs text-gray-400"></i>
+                        </span>
+                    </div>
+                    <div class="relative group cursor-pointer">
+                        <span class="flex items-center hover:text-brand-green transition-colors">
+                            Services <i class="fas fa-chevron-down ml-1 text-xs text-gray-400"></i>
+                        </span>
+                    </div>
+                   
+                </nav>
+
+                <!-- CTA Button -->
+                <div class="hidden md:flex items-center">
+                    <a href="#" class="bg-brand-red text-white px-6 py-2.5 rounded hover:bg-red-700 transition-colors duration-300 font-medium text-sm shadow-md">
+                        Contact Us
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-gray-900 focus:outline-none p-2">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 shadow-lg">
+                <a href="#" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-brand-green hover:bg-gray-50 rounded-md">Company</a>
+                <a href="#" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-brand-green hover:bg-gray-50 rounded-md">Our Brands</a>
+                <a href="#" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-brand-green hover:bg-gray-50 rounded-md">Services</a>
+                <a href="#" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-brand-green hover:bg-gray-50 rounded-md">Portfolio</a>
+                <a href="#" class="block px-3 py-2 text-base font-medium text-white bg-brand-red hover:bg-red-700 rounded-md text-center mt-4">Contact Us</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main class="w-full bg-[#fcfcfc]">
+        <div class="max-w-[1600px] mx-auto flex flex-col lg:flex-row min-h-[calc(100vh-80px)]">
+            
+            <!-- Left Column: Content -->
+            <div class="w-full lg:w-[55%] relative flex flex-col justify-center px-6 sm:px-12 lg:px-24 py-16 lg:py-0 overflow-hidden">
+   
+                <!-- Abstract Background Watermark (Now Blurred) -->
+<img src="17f55b4e-a8c9-495d-b1d9-3dafbc40d9dc.png" alt="Background shape" class="watermark-bg">
+
+                <div class="hero-left-content max-w-2xl">
+                    <h2 class="text-brand-green font-bold text-xl sm:text-2xl mb-4 tracking-wide">
+                        VPSA WEB SOLUTIONS 
+                    </h2>
+                    
+                    <h1 class="text-brand-dark font-extrabold text-4xl sm:text-5xl lg:text-6xl leading-[1.1] mb-6">
+                      Custom Web Portals / Websites
+
+                    </h1>
+                    
+                    <p class="text-gray-600 text-lg sm:text-xl leading-relaxed mb-10 max-w-xl font-medium">
+                        We specialize in building fast static websites, dynamic web portals, and robust software tailored for local enterprises and community organizations. Our custom digital solutions are designed to streamline your operations, engage your audience, and build a strong, lasting online presence.
+                    </p>
+                    
+                    <a href="#" class="inline-block bg-brand-red text-white font-semibold px-8 py-4 rounded-md hover:bg-red-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                        Share Your Vision with Us
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right Column: Image and Floating Assets -->
+            <div class="w-full lg:w-[45%] relative border-l-[8px] border-brand-green min-h-[400px] lg:min-h-full">
+                <!-- Office Image -->
+                <!-- Office Image -->
+<img src="WhatsApp Image 2026-11-01 at 8.10.46 PM.jpeg" 
+     alt="Team collaborating in a modern office" 
+     class="absolute inset-0 w-full h-full object-cover object-center">
+                
+                <!-- Overlay to ensure text/icons contrast if needed (optional) -->
+                <div class="absolute inset-0 bg-black/10"></div>
+
+                <!-- Floating Buttons -->
+                <!-- WhatsApp Button -->
+                <div class="absolute right-6 top-1/2 -translate-y-1/2 z-20 floating-icon">
+                    <a href="#" class="flex items-center justify-center w-14 h-14 bg-[#25D366] text-white rounded-full shadow-2xl hover:scale-110 transition-transform duration-300">
+                        <i class="fab fa-whatsapp text-3xl"></i>
+                    </a>
+                </div>
+                
+                <!-- Chat/Message Button -->
+                <div class="absolute right-6 bottom-12 z-20 floating-icon-delayed">
+                    <a href="#" class="flex items-center justify-center w-16 h-16 bg-[#8CC63F] text-white rounded-full shadow-2xl hover:scale-110 transition-transform duration-300 border-4 border-white">
+                        <i class="fas fa-comment-dots text-3xl"></i>
+                    </a>
+                </div>
+                
+                <!-- Decorative element bottom right (matching image) -->
+                <div class="absolute bottom-0 right-0 w-32 h-32 bg-brand-green/20 rounded-tl-full pointer-events-none"></div>
+                <div class="absolute bottom-0 right-0 w-48 h-48 bg-brand-red/10 rounded-tl-[100%] pointer-events-none"></div>
+            </div>
+            
+        </div>
+    </main>
+
+    <!-- JavaScript for Mobile Menu Toggle -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const icon = mobileMenuBtn.querySelector('i');
+
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                if (mobileMenu.classList.contains('hidden')) {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                } else {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
